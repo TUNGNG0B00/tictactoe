@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <title>Tic Tac Toe</title>
+  <style>
+
+    *{
+      font-family: "Press Start 2P", cursive;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #buttonMarker {
+      margin-bottom: 10px; /* Add margin between buttons and the board */
+    }
+
+    #buttonMarker button {
+      margin-top: 150px;
+      padding: 10px;
+      width: 100px;
+      border-radius: 20px;
+      box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.4);
+      border-style:none;
+      background-color: white;
+    }
+
+    #buttonMarker button:hover,
+.cell:hover, #clearButton:hover {
+  background-color: #b3b5ff;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+#buttonMarker button:active, #clearButton:active {
+  border: 2px solid blue;
+  background-color: #b3b5ff; 
+}
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.4);
+    }
+    #clearButton{
+      margin-top: 20px;
+      padding: 14px;
+      width: 100px;
+      font-size: 12px;
+      border-radius: 20px;
+      box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.4);
+      border-style:none;
+      background-color: white;
+
+    }
+
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="buttonMarker"></div>
+  <div id="board"></div>
+  <button id="clearButton">Clear Board</button>
+  <div id="result"></div>
+  <script src="tictactoe.js"></script>
+</body>
+</html>
